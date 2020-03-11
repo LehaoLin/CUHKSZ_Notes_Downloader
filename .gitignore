@@ -1,9 +1,10 @@
 *.DS_Store
 *.pyc
-.vscode/settings.json
+.vscode/
 king.ui
 *.ui
 __pycache__/
 mac/
 windows/
 ui/
+setup.py

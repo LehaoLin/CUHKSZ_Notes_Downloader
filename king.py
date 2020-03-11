@@ -8,7 +8,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from blackboard_export import lehao
+import sys
+# from blackboard_export import lehao
 
 
 class Ui_MainWindow(QtWidgets.QWidget):
@@ -137,6 +138,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
     def get_directory_name(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         directory_name = str(QtWidgets.QFileDialog.getExistingDirectoryUrl(self,'选择一个文件夹',QtCore.QUrl('./.')))
+
         directory_name = directory_name.replace("PyQt5.QtCore.QUrl('file://",'')
         directory_name = directory_name.replace("')",'')
         directory_name += '/'
@@ -149,12 +151,10 @@ class Ui_MainWindow(QtWidgets.QWidget):
         student_id = self.student_id.text()
         password = self.password.text()
         path = self.location.text()
-        lehao(student_id, password, path)
-
+        # lehao(student_id, password, path)
 
 
 if __name__ == "__main__":
-    import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
