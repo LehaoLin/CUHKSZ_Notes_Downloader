@@ -2,3 +2,4 @@
 *.pyc
 .vscode/settings.json
 *.ui
+__pycache__/
