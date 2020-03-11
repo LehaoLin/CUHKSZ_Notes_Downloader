@@ -96,7 +96,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>130</y>
+      <y>110</y>
       <width>151</width>
       <height>32</height>
      </rect>
@@ -261,13 +261,33 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>90</y>
+      <y>80</y>
       <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>批量从blackboard下载课件到本地</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="location">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>尚未选择文件夹</string>
     </property>
    </widget>
   </widget>

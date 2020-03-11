@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(QtWidgets.QWidget):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(531, 465)
@@ -43,7 +43,7 @@ class Ui_MainWindow(object):
         self.abstract_2.setFont(font)
         self.abstract_2.setObjectName("abstract_2")
         self.directory = QtWidgets.QPushButton(self.centralwidget)
-        self.directory.setGeometry(QtCore.QRect(20, 130, 151, 32))
+        self.directory.setGeometry(QtCore.QRect(20, 110, 151, 32))
         self.directory.setObjectName("directory")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(30, 160, 60, 16))
@@ -90,12 +90,23 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(10, 10, 60, 16))
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(110, 90, 211, 41))
+        self.label_2.setGeometry(QtCore.QRect(110, 80, 211, 41))
         self.label_2.setObjectName("label_2")
+        self.location = QtWidgets.QLabel(self.centralwidget)
+        self.location.setGeometry(QtCore.QRect(30, 140, 100, 16))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setUnderline(True)
+        font.setWeight(50)
+        self.location.setFont(font)
+        self.location.setObjectName("location")
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
+        self.directory.clicked.connect(self.get_directory_name)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -121,6 +132,18 @@ class Ui_MainWindow(object):
         self.notice1.setText(_translate("MainWindow", "仅输入可见"))
         self.label.setText(_translate("MainWindow", "v2020.3"))
         self.label_2.setText(_translate("MainWindow", "批量从blackboard下载课件到本地"))
+        self.location.setText(_translate("MainWindow", "尚未选择文件夹"))
+
+    def get_directory_name(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        directory_name = str(QtWidgets.QFileDialog.getExistingDirectoryUrl(self,'选择一个文件夹',QtCore.QUrl('./.')))
+        directory_name = directory_name.replace("PyQt5.QtCore.QUrl('file://",'')
+        directory_name = directory_name.replace("')",'')
+        self.location.setText(_translate("MainWindow",directory_name))
+        self.location.adjustSize()
+
+        print("name", directory_name)
+
 
 
 if __name__ == "__main__":
