@@ -6,3 +6,4 @@ king.ui
 __pycache__/
 mac/
 windows/
+ui/
