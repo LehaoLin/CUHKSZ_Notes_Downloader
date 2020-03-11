@@ -1,15 +1,6 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'king.ui'
-#
-# Created by: PyQt5 UI code generator 5.14.1
-#
-# WARNING! All changes made in this file will be lost!
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
-# from blackboard_export import lehao
+from blackboard_export import start_download
 
 
 class Ui_MainWindow(QtWidgets.QWidget):
@@ -43,12 +34,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.title.setFont(font)
         self.title.setTextFormat(QtCore.Qt.AutoText)
         self.title.setObjectName("title")
-        # self.abstract_2 = QtWidgets.QLabel(self.centralwidget)
-        # self.abstract_2.setGeometry(QtCore.QRect(180, 60, 181, 41))
-        # font = QtGui.QFont()
-        # font.setPointSize(18)
-        # self.abstract_2.setFont(font)
-        # self.abstract_2.setObjectName("abstract_2")
+
         self.directory = QtWidgets.QPushButton(self.centralwidget)
         self.directory.setGeometry(QtCore.QRect(20, 110, 151, 32))
         self.directory.setObjectName("directory")
@@ -58,22 +44,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(30, 230, 60, 16))
         self.label_4.setObjectName("label_4")
-        # self.alipay = QtWidgets.QLabel(self.centralwidget)
-        # self.alipay.setGeometry(QtCore.QRect(480, 120, 51, 51))
-        # self.alipay.setText("")
-        # self.alipay.setPixmap(QtGui.QPixmap("imgs/alipay.png"))
-        # self.alipay.setScaledContents(True)
-        # self.alipay.setIndent(-1)
-        # self.alipay.setObjectName("alipay")
-        # self.qrcode = QtWidgets.QLabel(self.centralwidget)
-        # self.qrcode.setGeometry(QtCore.QRect(330, 170, 201, 271))
-        # self.qrcode.setText("")
-        # self.qrcode.setPixmap(QtGui.QPixmap("imgs/qrcode.png"))
-        # self.qrcode.setScaledContents(True)
-        # self.qrcode.setObjectName("qrcode")
-        # self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        # self.textBrowser.setGeometry(QtCore.QRect(360, 100, 121, 71))
-        # self.textBrowser.setObjectName("textBrowser")
+
         self.email = QtWidgets.QLabel(self.centralwidget)
         self.email.setGeometry(QtCore.QRect(20, 410, 291, 21))
         self.email.setObjectName("email")
@@ -122,13 +93,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.directory.setText(_translate("MainWindow", "选择你的目标文件夹"))
         self.label_3.setText(_translate("MainWindow", "学号"))
         self.label_4.setText(_translate("MainWindow", "密码"))
-#         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-# "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-# "p, li { white-space: pre-wrap; }\n"
-# "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-# "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">如果您觉得有用，</p>\n"
-# "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">打赏两块钱，</p>\n"
-# "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">请我喝杯咖啡哦^_^</p></body></html>"))
+
         self.email.setText(_translate("MainWindow", "如有问题，请联系我: lehaolin@link.cuhk.edu.cn"))
         self.notice1.setText(_translate("MainWindow", "不会以任何方式储存你的密码"))
         self.label.setText(_translate("MainWindow", "v2020.3.0"))
@@ -151,7 +116,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         student_id = self.student_id.text()
         password = self.password.text()
         path = self.location.text()
-        # lehao(student_id, password, path)
+        start_download(student_id, password, path)
 
 
 if __name__ == "__main__":

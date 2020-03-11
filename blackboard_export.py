@@ -355,7 +355,7 @@ def main(student_id, password, fuck_path):
 
 
 
-def lehao(student_id, password, path):
+def start_download(student_id, password, path):
     main(student_id, password, path)
 
 
