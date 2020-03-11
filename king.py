@@ -114,7 +114,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "CUHKSZ课件下载器 v2020.3"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "CUHKSZ课件下载器 v2020.3.0"))
         self.download.setText(_translate("MainWindow", "下载"))
         self.title.setText(_translate("MainWindow", "CUHKSZ课件下载器"))
         # self.abstract_2.setText(_translate("MainWindow", "龙大学子的课件下载器"))
@@ -130,7 +130,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
 # "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">请我喝杯咖啡哦^_^</p></body></html>"))
         self.email.setText(_translate("MainWindow", "如有问题，请联系我: lehaolin@link.cuhk.edu.cn"))
         self.notice1.setText(_translate("MainWindow", "不会以任何方式储存你的密码"))
-        self.label.setText(_translate("MainWindow", "v2020.3"))
+        self.label.setText(_translate("MainWindow", "v2020.3.0"))
         self.label_2.setText(_translate("MainWindow", "批量从blackboard下载课件到本地"))
         self.location.setText(_translate("MainWindow", "尚未选择文件夹"))
 
