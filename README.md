@@ -9,4 +9,4 @@ CUHKSZ的课件下载器，从Blackboard上批量下载课件至本地
 
 -----------------
 2020年05月06日18:23:52更新状态：    
-Blackboard mobile API更改，此下载器已不可用
+Blackboard mobile API更改，连接不稳定，此下载器已不可用
